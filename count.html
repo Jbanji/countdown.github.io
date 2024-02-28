@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer</title>
+<link rel="stylesheet" href="contact.css" type="text/css">
+</head>
+<body>
+<div class="container">
+<img src="" class="logo">
+<div>
+<img src="https://countdown-timer-pp0b.onrender.com/images/iphone.jpg" alt="iphone giveaway" width="500px" height="400px">
+</div>
+<div class="content">
+<h3>OLD IPHONE GIVEAWAY</h3>
+<h4>The <span>iphone </span> giveaway ends on sunday, 1st april 2024 at 11:30am</h4>
+    <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur aut distinctio atque eos, est sit beatae nam necessitatibus. Cupiditate, minus cumque corporis dolor commodi facilis.</p>
+<div class="launch-time">
+<div>
+<p id="days">00</p>
+<span>Days</span>
+</div>
+<div>
+    <p id="hours">00</p>
+    <span>Hours</span>
+    </div>
+    <div>
+    <p id="minutes">00</p>
+    <span>Minutes</span>
+    </div>
+    <div>
+    <p id="Seconds">00</p>
+    <span>Seconds</span>
+    </div>
+</div>
+</div>
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(205, 241, 205);
+    line-height: 1.5;
+    font-size: 0.85rem;
+    }
+    .containerdiv{
+    display: flex;
+    justify-items: center;
+    position: absolute;
+    align-items: center;
+    padding: 150px 100px;
+    width: 100px;
+    
+    }
+    .launch-time div{
+        
+        
+        
+        align-items: center;
+        min-width: 50px;
+        border-color: rgb(70, 4, 70);
+        border: 7px solid;
+        border-color: rgb(65, 5, 65);
+        border-radius: 5px;
+        
+        padding: 0px 10px;
+        text-align: center;
+        color: black;
+        display: grid;
+        font-weight: bold;
+        }
+        img{
+        text-align: left;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+
+        }
+        .content{
+        align-items: center;
+        }
+        h4{
+        font-size: 18px;
+        letter-spacing: 1px;
+        color: black;
+        text-transform: capitalize;
+        text-align: left;
+        margin: 10px;
+        margin-bottom: 20px;
+        width: 450px;
+        }
+        .lorem{
+        font-size: 19px; 
+        text-align: left;
+        color:rgb(107, 98, 98);
+        margin: 10px;
+        margin-bottom: 18px;
+        width: 600px;
+        }
+        .launch-time{
+        display: flex;
+        align-items: left;
+        margin-left: 10px;
+        padding-left: 10px;
+        place-items: center;
+        }
+        .content{
+        text-align: right;
+        }
+        h3{
+            text-align: left;
+            color: rgb(165, 7, 165);
+            font-family: sans-serif;
+            font-size: 25px;
+            letter-spacing: 1px;
+            margin: 10px;
+            margin-bottom: 35px;
+        }
+        
+</style>
+<script>
+    var countDownDate = new Date("april 1, 2024 00:00:00").getTime();
+    var x = setInterval(function(){
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var Seconds = Math.floor((distance % (1000 * 60)) / 1000)
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("Seconds").innerHTML = Seconds;
+    if(distance < 0){
+clearInterval(x);
+document.getElementById("days").innerHTML = "00";
+document.getElementById("hours").innerHTML = "00";
+document.getElementById("minutes").innerHTML = "00";
+document.getElementById("Seconds").innerHTML = "00";
+}
+},1000)
+</script>    
